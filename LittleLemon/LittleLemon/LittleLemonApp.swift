@@ -1,11 +1,5 @@
-//
-//  LittleLemonApp.swift
-//  LittleLemon
-//
-//  Created by Yu on 2024-06-10.
-//
-
 import SwiftUI
+import CoreData
 
 @main
 struct LittleLemonApp: App {
