@@ -21,7 +21,39 @@ struct Onboarding: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Spacer()
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 40)
+                    .padding(.bottom)
+                ZStack{
+                    Color(red: 0.286, green: 0.373, blue: 0.345)
+                        .ignoresSafeArea()
+                    VStack(alignment:.leading){
+                        Text("Little Lemon")
+                            .font(.largeTitle)
+                            .foregroundStyle(Color.yellow)
+                        Text("Chicago")
+                            .font(.title)
+                            .foregroundStyle(Color.white)
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
+                                    .foregroundStyle(Color.white)
+                            }
+                            VStack {
+                                Image("food-image")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 80)
+                                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 16, height: 16)))
+                                    .shadow(radius: 5)
+                            }
+                        }
+                    }
+                }
+                .frame(height: 300)
+                .padding(.bottom)
                 TextField("First Name", text: $firstName)
                     .padding()
                     .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)

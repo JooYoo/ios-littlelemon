@@ -11,6 +11,7 @@ struct Home: View {
     let persistenceController = PersistenceController.shared
 
     var body: some View {
+
         TabView {
             Menu()
                 .tabItem {
@@ -22,9 +23,7 @@ struct Home: View {
                 .tabItem {
                     Label("Profile", systemImage: "square.and.pencil")
                 }
-        }.navigationBarBackButtonHidden(true)
-            .padding(.all)
-        
+        }
     }
 }
 
